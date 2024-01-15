@@ -1,5 +1,4 @@
 import React, { useContext, useEffect, useState } from 'react'
-import OwnerAddedCardsVisit from '../Components/OwnerAddedCardsVisit'
 import { deleteHostelAPI, ownerHostelAPI } from '../services/allAPI'
 import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 import { addHostelResponseContext, editHostelResoponseContext } from '../context/ContextShare'

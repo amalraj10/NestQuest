@@ -2,6 +2,7 @@ import React, { useContext } from 'react'
 import { Button, Card, Col, Row } from 'react-bootstrap'
 import { Link, useNavigate } from 'react-router-dom'
 import { isDashoBoardContext } from '../context/ContextShare'
+import './card.css'
 
 function OwnerDashboard() {
   const {isdashboardToken,setIsdashboardToken} = useContext(isDashoBoardContext)

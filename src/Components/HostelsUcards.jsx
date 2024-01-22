@@ -3,6 +3,7 @@ import { Button, Card, Col, Row } from 'react-bootstrap'
 import { allHostelAPI,allHostelnewAPI } from '../services/allAPI'
 import { BASE_URL } from '../services/baseurl'
 import { Link } from 'react-router-dom'
+import './cards.css'
 
 
 function HostelsUcards({hostel,sethostelid}) {
@@ -43,8 +44,8 @@ useEffect(()=>{
     <div><div data-aos="flip-down" data-aos-easing="linear" data-aos-duration="800" className='mt-5 container'>
    
    
-        <Card  className='mt-5 card shadow' style={{ width: '18rem'}}>
-          <Card.Img variant="top" style={{ height: '250px' }} className='p-2' src={hostel?`${BASE_URL}/uploads/${hostel.hostelimage1}`:"https://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/room-8-529x406.jpg"} />
+        <Card  className='mt-5 card shadow ' style={{ width: '18rem'}}>
+          <Card.Img variant="top" style={{ height: '250px' }} className='p-2'  src={hostel?`${BASE_URL}/uploads/${hostel.hostelimage1}`:"https://cityhostel.axiomthemes.com/wp-content/uploads/2016/12/room-8-529x406.jpg"} />
           <Card.Body>
             <Card.Title> <b>{hostel.hostelName}</b></Card.Title>
             <Card.Text>

@@ -42,6 +42,8 @@ useEffect(()=>{
 },[])
   return (
     <div><div data-aos="flip-down" data-aos-easing="linear" data-aos-duration="800" className='mt-5 container'>
+
+      
    
    
         <Card  className='mt-5 card shadow ' style={{ width: '18rem'}}>

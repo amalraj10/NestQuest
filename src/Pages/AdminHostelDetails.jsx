@@ -6,47 +6,45 @@ import { allHostelAPI, allHostelnewAPI } from '../services/allAPI';
 import { Link, useParams } from 'react-router-dom';
 import { BASE_URL } from '../services/baseurl';
 
-function HostelDetails({hostelid}) {
-  const [allHostel,setAllHostel] = useState([])
-  const [Hostel,setHostel] = useState({})
-  const token = sessionStorage.getItem("token")
-  const params = useParams()
-  console.log(params.id);
-  const newhostel = allHostel.find(item=>item._id===params.id)
-  console.log(newhostel);
-
-
+function AdminHostelDetails() {
+    const [allHostel,setAllHostel] = useState([])
+    const [Hostel,setHostel] = useState({})
+    const token = sessionStorage.getItem("token")
+    const params = useParams()
+    console.log(params.id);
+    const newhostel = allHostel.find(item=>item._id===params.id)
+    console.log(newhostel);
   
-const getAllHostel = async()=>{
-
-
-if(sessionStorage.getItem("token")){
-  const token = sessionStorage.getItem("token")
-  const reqHeader = {
- 
-      "Content-Type":"application/json",
-      "Authorization":`Bearer ${token}`
   
-
+    
+  const getAllHostel = async()=>{
+  
+  
+  if(sessionStorage.getItem("token")){
+    const token = sessionStorage.getItem("token")
+    const reqHeader = {
+   
+        "Content-Type":"application/json",
+        "Authorization":`Bearer ${token}`
+    
+  
+    }
+    
+    const result = await allHostelnewAPI(reqHeader)
+    setAllHostel(result.data)
   }
+  // const param =useParams()
+  // console.log(params.id);
   
-  const result = await allHostelnewAPI(reqHeader)
-  setAllHostel(result.data)
-}
-// const param =useParams()
-// console.log(params.id);
-
- console.log(allHostel.hostelid);
-
-
-}
-useEffect(()=>{
-  getAllHostel()
-},[])
-
-
+   console.log(allHostel.hostelid);
   
-
+  
+  }
+  useEffect(()=>{
+    getAllHostel()
+  },[])
+  
+  
   return (
     <div style={{overflowX: 'hidden' }}>
         <Row >
@@ -111,8 +109,9 @@ useEffect(()=>{
     <p><i style={{color:"#218b7a"}} class="fa-solid fa-circle-check"></i>  {newhostel?newhostel.fc5:"facility5"}</p>
     <h4><b>Occupacy</b></h4>
     <p><i style={{color:"#218b7a"}} class="fa-solid fa-users"></i> {newhostel?newhostel.occupancy:"occupancy"}</p>
-    <p><i style={{color:"#218b7a"}} class="fa-solid fa-hashtag"></i> Available Room : {newhostel?newhostel.availableRoom:"availableRoom"} </p>
-    <Link to={`/hostel-booking/${newhostel?._id}`} >   <Button href='/hostel-booking' className=' '   style={{ backgroundColor:"#218b7a",width:"30%"}}>Book Now</Button></Link>
+    <p> <i style={{color:"#218b7a"}} class="fa-solid fa-hashtag"></i> Available Room : {newhostel?newhostel.availableRoom:"availableRoom"} </p>
+    <h4 ><b>License No. </b></h4>
+    <p> <i style={{color:"#218b7a"}} class="fa-solid fa-id-card"></i> {newhostel?newhostel.license:"license"} </p>
     
     </Container>
 
@@ -126,5 +125,4 @@ useEffect(()=>{
     </div>
   );
 }
-
-export default HostelDetails;
+export default AdminHostelDetails

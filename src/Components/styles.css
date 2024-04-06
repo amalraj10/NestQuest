@@ -1,9 +1,3 @@
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
-
-
-
 #app { height: 100% }
 html,
 body {
@@ -55,4 +49,52 @@ body {
   background-color: #218b7a;
   border-color: #218b7a;
   color: white;
+}
+
+
+/* styles.css */
+
+.custom-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.custom-card:hover .overlay {
+  transform: translateY(0%);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #9f7aea, #7f55f3);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.custom-card .overlay:before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  right: -12px;
+  font-size: 9rem;
+  color: #fff;
+  transform: rotate(12deg);
+}
+
+.custom-card:hover .text {
+  color: #fff;
+}
+
+.text {
+  font-size: 2rem;
+  color: #7f55f3;
+  transition: color 0.3s ease;
+}
+
+.text b {
+  color: #fff;
+}
+
+.text p {
+  margin: 0;
 }

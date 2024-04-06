@@ -87,8 +87,13 @@ function LogReg({ register }) {
             email: '',
             password: '',
           });
-    
-          navigate('/owner-dashboard');
+    if(result.data.existingOwner.username=="Admin" && result.data.existingOwner.email == "admin@gmail.com" && result.data.existingOwner.password == "admin123"){
+      navigate('/admin-dash')
+    }
+    else{
+      
+      navigate('/owner-dashboard');
+    }
         });
       } else {
         Swal.fire({

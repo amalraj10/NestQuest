@@ -18,6 +18,13 @@ import OwnerChanges from './Pages/OwnerChanges';
 import OwnerBookedUserVisit from './Pages/OwnerBookedUserVisit';
 import { useContext, useState } from 'react';
 import { isDashoBoardContext, isHomeContext } from './context/ContextShare';
+import AdminDash from './Pages/AdminDash';
+import AdminHostelDetails from './Pages/AdminHostelDetails';
+
+import { HoverImageLinks } from './Pages/HoverImageLinks';
+
+
+
 
 
 
@@ -44,7 +51,9 @@ function App() {
        <Route path='/owner-hostel-visit' element={<OwnerHostelVisit/>}/>
        <Route path='/owner-changes' element={<OwnerChanges/>}/>
        <Route path='/owner-Booked-User-Visit/:id' element={<OwnerBookedUserVisit/>}/>
-      
+       <Route path='/admin-dash' element={<AdminDash/>} />
+       <Route path='/admin-hostel-details/:id' element = {<AdminHostelDetails/>}/>
+       <Route path='/hover' element={<HoverImageLinks/>} />
 
       </Routes>
 <Footer/>

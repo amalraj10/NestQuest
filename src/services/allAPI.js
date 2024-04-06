@@ -50,6 +50,12 @@ export const editHostelAPI = async(hostelId,reqBody,reqHeader)=>{
   return await commonAPI('PUT',`${BASE_URL}/hostel/edit/${hostelId}`,reqBody,reqHeader)
 }
 
+//edit admin Confirm
+export const editAdminConfirmAPI = async(hostelId,reqBody,reqHeader)=>{
+  return await commonAPI('PUT',`${BASE_URL}/admin/edit/${hostelId}`,reqBody,reqHeader)
+}
+
+
 //delete hostel
 export const deleteHostelAPI = async(hostelId,reqHeader)=>{
   return await commonAPI('DELETE',`${BASE_URL}/hostel/remove/${hostelId}`,{},reqHeader)
@@ -68,4 +74,32 @@ export const bookedUserDtAPI = async (hostelID,reqHeader) => {
 //delete details
 export const delteUserDtAPI = async (userdtId,reqHeader) => {
   return await commonAPI('DELETE', `${BASE_URL}/userdt/remove/${userdtId}`,{}, reqHeader);
+}
+
+//edit AdminCOnfirm
+export const adminHostelConfirmApi = async(hostelId,reqBody,reqHeader)=>{
+  return await commonAPI('PUT',`${BASE_URL}/hostel/edit/${hostelId}`,reqBody,reqHeader)
+}
+
+
+//owner msg
+export const OwnerMsgAPI = async(reqBody,reqHeader)=>{
+  return await commonAPI('POST',`${BASE_URL}/owner/msg`,reqBody,reqHeader)
+}
+
+
+//getting Owner msg
+export const getOwnerSndAPI = async (hostelID,reqHeader) => {
+  return await commonAPI('GET', `${BASE_URL}/owner/snd-msg/${hostelID}`, "", reqHeader);
+}
+
+//admin msg
+export const AdminMsgAPI = async(reqBody,reqHeader)=>{
+  return await commonAPI('POST',`${BASE_URL}/admin/msg`,reqBody,reqHeader)
+}
+
+
+//getting Admin msg
+export const getAdminSndAPI = async (hostelID,reqHeader) => {
+  return await commonAPI('GET', `${BASE_URL}/admin/snd-msg/${hostelID}`, "", reqHeader);
 }

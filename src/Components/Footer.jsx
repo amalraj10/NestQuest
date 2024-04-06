@@ -38,11 +38,11 @@ function Footer() {
        <Link style={{textDecoration:'none',color:'#1e1e38'}} to={''}> <i class="fa-solid fa-envelope me-3"></i>info@NestQuest.com</Link>
 
        </div>
-       <div className='col-lg-3 col-sm-12 icons d-flex justify-content-evenly ms-5 mt-3'>
-          <Link to={'https://www.instagram.com/'} style={{ textDecoration:'none',color:"#1e1e38"}}><i class="fa-brands fa-instagram fa-2x me-4"></i></Link>
-        <Link to={'https://www.facebook.com/'} style={{textDecoration:'none',color:"#1e1e38"}}><i class="fa-brands fa-facebook fa-2x me-4 "></i></Link>
-        <Link to={'https://www.linkedin.com/'} style={{textDecoration:'none',color:"#1e1e38"}}><i class="fa-brands fa-linkedin-in fa-2x me-4"></i></Link>
-        <Link to={'https://twitter.com/'} style={{textDecoration:'none',color:"#1e1e38"}}><i class="fa-brands fa-twitter fa-2x "></i></Link>
+       <div className='col-lg-3 col-sm-12 icons d-flex justify-content-evenly  mt-3'>
+          <Link to={''} style={{ textDecoration:'none',color:"#1e1e38"}}><i class="fa-brands fa-instagram fa-2x me-4"></i></Link>
+        <Link to={''} style={{textDecoration:'none',color:"#1e1e38"}}><i class="fa-brands fa-facebook fa-2x me-4 "></i></Link>
+        <Link to={''} style={{textDecoration:'none',color:"#1e1e38"}}><i class="fa-brands fa-linkedin-in fa-2x me-4"></i></Link>
+        <Link to={''} style={{textDecoration:'none',color:"#1e1e38"}}><i class="fa-brands fa-twitter fa-2x "></i></Link>
 
        </div>
       

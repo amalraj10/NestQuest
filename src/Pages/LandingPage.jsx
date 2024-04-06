@@ -125,31 +125,31 @@ function LandingPage() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img  src="https://img.cdn.zostel.com/zostel/gallery/images/sibBu9H0TGGPnbbI5zu2gQ/zostel-mussoorie-mall-road-20231127111124.jpg" />
+          <img style={{borderRadius:"10px"}} src="https://img.cdn.zostel.com/zostel/gallery/images/sibBu9H0TGGPnbbI5zu2gQ/zostel-mussoorie-mall-road-20231127111124.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://img.cdn.zostel.com/zostel/gallery/images/t1WMsgJMSNeyRxS2kKmdkA/zostel-mussoorie-mall-road-20231127111514.jpg" />
+          <img style={{borderRadius:"10px"}} src="https://img.cdn.zostel.com/zostel/gallery/images/t1WMsgJMSNeyRxS2kKmdkA/zostel-mussoorie-mall-road-20231127111514.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://img.cdn.zostel.com/zostel/gallery/images/UGzxYDf1RRaaJT94iVBFUQ/zostel-mussoorie-mall-road-20231127111510.jpg" />
+          <img style={{borderRadius:"10px"}} src="https://img.cdn.zostel.com/zostel/gallery/images/UGzxYDf1RRaaJT94iVBFUQ/zostel-mussoorie-mall-road-20231127111510.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://img.cdn.zostel.com/zostel/gallery/images/s23Vee3wT4ueGPDWWgL7aw/zostel-mussoorie-mall-road-20231127111137.jpg" />
+          <img style={{borderRadius:"10px"}} src="https://img.cdn.zostel.com/zostel/gallery/images/s23Vee3wT4ueGPDWWgL7aw/zostel-mussoorie-mall-road-20231127111137.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://img.cdn.zostel.com/zostel/gallery/images/N43ZDKg2RQ6B1ZFL85tTtg/zostel-mussoorie-mall-road-20231127111216.jpg" />
+          <img style={{borderRadius:"10px"}} src="https://img.cdn.zostel.com/zostel/gallery/images/N43ZDKg2RQ6B1ZFL85tTtg/zostel-mussoorie-mall-road-20231127111216.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://img.cdn.zostel.com/zostel/gallery/images/7eydmIdFQtuMNz1_KYF1Pg/zostel-mussoorie-mall-road-20231127111130.jpg" />
+          <img style={{borderRadius:"10px"}} src="https://img.cdn.zostel.com/zostel/gallery/images/7eydmIdFQtuMNz1_KYF1Pg/zostel-mussoorie-mall-road-20231127111130.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://img.cdn.zostel.com/zostel/gallery/images/96jvOJYwSbyY-3imtj5Abw/zostel-mussoorie-mall-road-20231127111520.jpg" />
+          <img style={{borderRadius:"10px"}} src="https://img.cdn.zostel.com/zostel/gallery/images/96jvOJYwSbyY-3imtj5Abw/zostel-mussoorie-mall-road-20231127111520.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://img.cdn.zostel.com/zostel/gallery/images/fWM-TRlrQ8uPmzTLntLilQ/zostel-mussoorie-mall-road-20231127111139.jpg" />
+          <img style={{borderRadius:"10px"}} src="https://img.cdn.zostel.com/zostel/gallery/images/fWM-TRlrQ8uPmzTLntLilQ/zostel-mussoorie-mall-road-20231127111139.jpg" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="https://img.cdn.zostel.com/zostel/gallery/images/tQ7C8ToKSViazmju59tk0g/zostel-mussoorie-mall-road-20231127111316.jpg" />
+          <img style={{borderRadius:"10px"}} src="https://img.cdn.zostel.com/zostel/gallery/images/tQ7C8ToKSViazmju59tk0g/zostel-mussoorie-mall-road-20231127111316.jpg" />
         </SwiperSlide>
       </Swiper>
 

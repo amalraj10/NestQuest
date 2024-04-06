@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react'
 import { Button, Modal, Container, Form, Row, Col, InputGroup } from 'react-bootstrap';
 import { BASE_URL } from '../services/baseurl';
+import { upload } from '@testing-library/user-event/dist/upload';
 import { editHostelAPI } from '../services/allAPI';
 import { editHostelResoponseContext } from '../context/ContextShare';
 import Swal from 'sweetalert2';

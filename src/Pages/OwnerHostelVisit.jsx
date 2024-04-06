@@ -1,10 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react'
+import OwnerAddedCardsVisit from '../Components/OwnerAddedCardsVisit'
 import { deleteHostelAPI, ownerHostelAPI } from '../services/allAPI'
 import { Button, Card, Col, Container, Row } from 'react-bootstrap'
 import { addHostelResponseContext, editHostelResoponseContext } from '../context/ContextShare'
 import HostelChanges from '../Components/HostelChanges'
 import { BASE_URL } from '../services/baseurl'
 import { Link, useParams } from 'react-router-dom'
+import './card.css'
 
 function OwnerHostelVisit() {
   const [ownerHostel,setOwnerHostel] = useState([])
@@ -86,6 +88,7 @@ else{
              <HostelChanges Hostel = {item}/>
 
         </div>
+
           </Card.Body>
         </Card>
 </Col>

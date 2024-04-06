@@ -4,6 +4,7 @@ export const addHostelResponseContext = createContext()
 export const editHostelResoponseContext = createContext()
 export const isDashoBoardContext = createContext()
 export const isHomeContext = createContext()
+export const isrefreshContext = createContext()
 
 function ContextShare({children}) {
     
@@ -12,6 +13,7 @@ function ContextShare({children}) {
     const [editHostelResponse , seteditHostelResponse] = useState({})
     const [isdashboardToken,setIsdashboardToken] = useState(true)
     const [isHomeToken,setIsHomeToken] = useState(true)
+    const [isRefreshToken,setisRefreshToken] = useState(true)
 
   return (
     <>
@@ -19,8 +21,9 @@ function ContextShare({children}) {
 <editHostelResoponseContext.Provider value={{editHostelResponse,seteditHostelResponse}}>
 <isDashoBoardContext.Provider value={{isdashboardToken,setIsdashboardToken}}>
 <isHomeContext.Provider value={{isHomeToken,setIsHomeToken}}>
+  <isrefreshContext.Provider value={{isRefreshToken,setisRefreshToken}}>
 
-{children}
+{children}</isrefreshContext.Provider>
 </isHomeContext.Provider>
 
 </isDashoBoardContext.Provider>

@@ -110,7 +110,7 @@ const handleSubmit = async(e)=>{
     Swal.fire({
       icon: 'error',
       title: 'Incorrect Form',
-      text: 'Please fill the form Correctly.',
+      text: 'Aadhar number is not valid.',
     });
     return; // Prevent form submission
   }
@@ -118,7 +118,7 @@ const handleSubmit = async(e)=>{
     Swal.fire({
       icon: 'error',
       title: 'Incorrect Form',
-      text: 'Please fill the form Correctly.',
+      text: 'Mobile number is not valid..',
     });
     return; // Prevent form submission
   }

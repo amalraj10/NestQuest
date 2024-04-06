@@ -24,10 +24,10 @@ const {addHostelResponse , setAddHostelResponse} = useContext(addHostelResponseC
     fc4: "",
     fc5: "",
     description:"",
-    mapLocation:"",
     hostelimage1:"",
     hostelimage2:"",
-    hostelimage3:""
+    hostelimage3:"",
+    conformation:"pending"
   
   });
   //state to hold token
@@ -60,10 +60,16 @@ const isValidLicense = (license) => {
 const handleSubmit = async(e)=>{
 e.preventDefault()
 
-const{hostelName,dLmark,license,rate,occupancy,availableRoom, fc1,fc2,fc3,fc4,fc5,description,hostelimage1,hostelimage2,hostelimage3} = hostelDetails
+const{hostelName,dLmark,license,rate,occupancy,availableRoom, fc1,fc2,fc3,fc4,fc5,description,hostelimage1,hostelimage2,hostelimage3,conformation} = hostelDetails
 
 
  // Validate license
+ if (!isValidLicense(license)) {
+  Swal.fire({
+    icon: 'error',
+    title: 'Incorrect Form',
+    text: 'License number is not correct.',
+  });
 
  if (!hostelName || !dLmark || !rate || !occupancy || !availableRoom ||
   !fc1 || !fc2 || !fc3 || !fc4 || !fc5  || !description || !hostelimage1 || !hostelimage2 || !hostelimage3) {
@@ -74,12 +80,7 @@ const{hostelName,dLmark,license,rate,occupancy,availableRoom, fc1,fc2,fc3,fc4,fc
   });
 }
 
- if (!isValidLicense(license)) {
-  Swal.fire({
-    icon: 'error',
-    title: 'Incorrect Form',
-    text: 'Please fill out the form correctly.',
-  });
+ 
   return; // Prevent form submission
 }
 
@@ -107,6 +108,7 @@ else{
   reqBody.append("hostelimage1",hostelimage1)
   reqBody.append("hostelimage12",hostelimage2)
   reqBody.append("hostelimage3",hostelimage3)
+  reqBody.append("conformation",conformation)
 
 if(token){  const reqHeader = {
     "Content-Type":"multipart/form-data",
@@ -120,7 +122,7 @@ if(token){  const reqHeader = {
     console.log(result.data);
     Swal.fire({
         title: 'Success',
-        text: 'Hostel added Successfully',
+        text: 'Successfully Submitted',
         icon: 'success',
         confirmButtonText: 'OK'        
 
@@ -172,6 +174,7 @@ else {
     <div data-aos="flip-up"
     data-aos-easing="linear" data-aos-duration="800" style={{ marginTop: '30px', display: 'flex', justifyContent: 'center' }}>
       <Container>
+        
         <Form style={{ padding: '20px', border: '1px solid #ccc', borderRadius: '20px',backgroundColor: '#f5f5f5' }} >
           <center><h2><b>Create Your Hostel Listing - Start Hosting Today!</b></h2></center>
 
